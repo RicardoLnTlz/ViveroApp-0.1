@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vivero</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link  rel="stylesheet" href="jquery/jquery.mobile-1.4.5.min.css"/>
+<script src="jquery/jquery-latest.js"></script>
+<script src="jquery/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+
+
+
+
+<!--Iniciar sesion-->
+<div data-role="page" id="Login" >
+<style type="text/css">
+	
+#tituloR{
+	text-align: center;
+
+}
+
+#aa{
+	height: 50px;
+	width: 100px;
+}
+
+#Login{
+	background-image: url("imagenes/simple-green.jpg");
+	
+}
+
+
+#pUsuario{
+	background-image: url("imagenes/simple-green.jpg");
+	color: #fff;
+}
+
+#isAdmin{
+	color: #fff;
+	background-image: url("imagenes/simple-green.jpg");
+}
+#registro{
+	background-image: url("imagenes/simple-green.jpg");
+	color: #fff;
+}
+
+#pAdminInventario{
+	background-image: url("imagenes/simple-green.jpg");
+	color: #fff;
+}
+
+#pAdminUsuarios{
+	background-image: url("imagenes/simple-green.jpg");
+	color: #fff;	
+}
+#pAdminAltas{
+	background-image: url("imagenes/simple-green.jpg");
+	color: #fff;	
+}
+
+#pAdminBajas{
+	background-image: url("imagenes/simple-green.jpg");
+	color: #fff;		
+}
+
+#pAdminArticulos{
+	background-image: url("imagenes/simple-green.jpg");
+	color: #fff;		
+}
+#piePagina{
+	background-image: url("imagenes/simple-green.jpg");
+	color: #fff;	
+}
+
+
+</style>
+
+	
+														<!-- Login Pagina de inicio -->
+
+	<!--Cabezera 
+	<div data-role="header" id="cabezera1" align="center">
+	
+	
+	</div> -->
+
+	<!--Contenido -->
+	<div data-role="content" align="center">
+	<img src="imagenes/logomovil.png" style="border-radius: 20px" width="250" height="150">
+		<form id="form_login">
+			<h1 style="color: #fff">Iniciar Sesión</h1>
+
+		<input type="text" id="txtUser" value="" placeholder="Usuario">
+		<input type="password" id="txtpass" value="" placeholder="*******" name="">
+		<a id="in" data-role="button" data-icon="user" style="background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201 ; ">Iniciar Sesion</a>
+		<a href="#registro" data-mini="true" data-role="button" data-inline="true" data-icon="action" style="background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201" ;>Registrar Usuario</a>
+		<!--<a href="#pUsuario" data-role="button">Pagina usuario</a>-->
+		
+		</form>
+	</div>
+
+													
+
+	    
+	
+
+</div>
+
+											<!-- Aqui nuestro dialog con el mensaje de error  -->
+	
+	<div id="pageError" data-role="dialog">
+	        <header data-role="header" style="background-image: url(imagenes/simple-green.jpg);
+	color: #fff;">
+	            <h1>Error</h1>
+	        </header>
+	        <article data-role="content" style="background-image: url(imagenes/simple-green.jpg);
+	color: #fff;">
+	            <p style="font-size: 17px; font-family: Bookman Old Style;font-weight: lighter;">Usuario/Contraseña incorrecta</p>
+	            <a href="#" data-role="button" data-rel="back" style="background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201">Aceptar</a>
+	        </article>
+	    </div>
+
+
+
+															<!--Iniciar admin-->
+<div data-role="page" id="isAdmin">
+
+	
+
+	<!--Cabezera -->
+	<div data-role="header" style="background-image: url(imagenes/simple-green.jpg);
+	color: #fff; ">
+		
+	<h1 data-inline="true" >Administrador</h1>
+	
+	</div>
+
+	<!--Contenido -->
+	<div data-role="content" align="left">
+	
+	<h1>Bienvenido</h1>
+	<a href="#pAdminInventario" data-role="button" data-icon="bars" style="background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201">Inventario</a>
+	<a href="#pAdminUsuarios" data-role="button" data-icon="user" style="background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201">Usuarios</a>
+	<a href="#pAdminAltas" data-role="button" data-icon="carat-u" style="background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201">Altas</a>
+	<a href="#pAdminBajas" data-role="button" data-icon="carat-d" style="background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201">Bajas</a>
+	<a href="#pAdminArticulos" data-role="button" data-icon="grid" style="background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201">Articulos</a>
+	<a href="#CSee" data-role="button" data-rel="popup" data-position-to="window" data-transition="pop" data-icon="back" style="background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201">Cerrar Sesion</a>
+	
+	</div>
+
+									<!--Confirmar cerrar sesion admin-->
+
+		<div data-role="popup" id="CSee" style=" padding:10px ;background-image: url(imagenes/simple-green.jpg);
+	color: #fff; ">
+
+			
+			<p>¿Cerrar Sesion?</p>
+			<a href="#Login" data-role="button" data-icon="check" style="background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201">Si</a>
+			<a href="#isAdmin" data-role="button" data-icon="delete" style="background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201">No</a>
+			
+
+		</div>
+	
+
+
+</div>
+
+
+	
+
+
+												<!--Pagina de Inventario ADMIN-->
+
+<div id="pAdminInventario" data-role="page">
+	<div data-role="header" id="cabezera" align="center" style="background-image: url(imagenes/simple-green.jpg);
+	color: #fff; ">
+	<h1>Usuarios</h1>
+	</div>
+	<div data-role="content" id="cabezera" align="center">
+
+		
+		
+		<a href="#isAdmin" data-role="button" data-icon="back" style="background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201">Volver</a>
+	</div>
+	
+	<!--Pie de pagina -->
+	<div data-role="footer" id="piePagina" data-position="fixed" >
+	<h2>Derechos reservados <br>Vivero@2017</h2>
+	</div>
+</div>
+
+
+ 														<!--Pagina de usuario ADMIN-->
+
+<div id="pAdminUsuarios" data-role="page">
+	<div data-role="header" id="cabezera" align="center" style="background-image: url(imagenes/simple-green.jpg);
+	color: #fff; ">
+	<h1>Usuarios</h1>
+	</div>
+	<div data-role="content" id="cabezera" align="center">
+
+		<a href="" data-role="button" data-icon="phone" style="background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201">Pedidos</a>
+		<a href="" data-role="button" data-icon="shop" style="background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201">Servicios</a>
+		<a href="" data-role="button" data-icon="comment" style="background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201">Mensajes</a>
+		
+		<a href="#isAdmin" data-role="button" data-icon="back" style="background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201">Volver</a>
+	</div>
+	
+	<!--Pie de pagina -->
+	<div data-role="footer" id="piePagina" data-position="fixed" >
+	<h2>Derechos reservados <br>Vivero@2017</h2>
+	</div>
+</div>
+
+														<!--Pagina de altas ADMIN-->
+
+<div id="pAdminAltas" data-role="page">
+	<div data-role="header" id="cabezera" align="center" style="background-image: url(imagenes/simple-green.jpg);
+	color: #fff; ">
+	<h1>Usuarios</h1>
+	</div>
+	<div data-role="content" id="cabezera" align="center">
+
+		<table>
+		<tr>
+			<td id="tituloR">Tipo de articulo:</td>
+			<td>
+				<select id="RArticulo">
+					<option>Planta</option>
+					<option>Cuadro</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td id="tituloR">Titulo de articulo:</td>
+			<td><input type="text" id="RNombreA" placeholder="Planta o cuadro..."></td>
+		</tr>
+		<tr>
+			<td id="tituloR">Foto:</td>
+			<td><input type="file" id="RFotoA"></td>
+		</tr>
+		<tr>
+			<td id="tituloR">Comentario:</td>
+			<td><textarea rows="40" cols="20" id="RComentarioA" placeholder="Caracteristicas..."></textarea></td>
+		</tr>
+		<tr>
+			<td id="tituloR">Cantidad total:</td>
+			<td><input type="number" id="RCantidadA" placeholder="1,2,3,4,5..."></td>
+		</tr>
+		<tr>
+			<td id="tituloR">Fecha de ingreso:</td>
+			<td><input type="date" id="RFechaA"></td>
+		</tr>
+		<tr>
+			<td id="tituloR">Precio/pieza:</td>
+			<td>$<input type="text" id="RPrecioA" placeholder="200.00"></td>
+		</tr>
+	</table>
+		
+		<a  id="RegistroA" data-role="button" data-icon="check" style="background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201">Registrar</a>
+		<a href="#isAdmin" data-role="button" data-icon="back" style="background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201">Volver</a>
+	</div>
+	
+	<!--Pie de pagina -->
+	<div data-role="footer" id="piePagina" data-position="fixed" >
+	<h2>Derechos reservados <br>Vivero@2017</h2>
+	</div>
+</div>
+
+
+
+														<!--ARTICULO REGISTRADO-->
+
+<div data-role="dialog" id="registroArticulos2">
+	<div data-role="header">
+		<h1>Articulo registrado!</h1>
+	</div>
+
+	<div data-role="content">
+		<a href="#pAdminAltas" data-role="button">Aceptar</a>
+	</div>
+	
+</div>
+
+
+
+														<!--Pagina de bajas ADMIN-->
+
+<div id="pAdminBajas" data-role="page">
+	<div data-role="header" id="cabezera" align="center" style="background-image: url(imagenes/simple-green.jpg);
+	color: #fff; ">
+	<h1>Usuarios</h1>
+	</div>
+	<div data-role="content" id="cabezera" align="center">
+
+		
+		
+		<a href="#isAdmin" data-role="button" data-icon="back" style="background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201">Volver</a>
+	</div>
+	
+	<!--Pie de pagina -->
+	<div data-role="footer" id="piePagina" data-position="fixed" >
+	<h2>Derechos reservados <br>Vivero@2017</h2>
+	</div>
+</div>
+
+														<!--Pagina de Articulos ADMIN-->
+
+<div id="pAdminArticulos" data-role="page">
+	<div data-role="header" id="cabezera" align="center" style="background-image: url(imagenes/simple-green.jpg);
+	color: #fff; ">
+	<h1>Usuarios</h1>
+	</div>
+	<div data-role="content" id="cabezera" align="center">
+
+		
+		
+		<a href="#isAdmin" data-role="button" data-icon="back" style="background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201">Volver</a>
+	</div>
+	
+	<!--Pie de pagina -->
+	<div data-role="footer" id="piePagina" data-position="fixed" >
+	<h2>Derechos reservados <br>Vivero@2017</h2>
+	</div>
+</div>
+
+														
+
+
+														<!-- Registro de usuarios -->
+
+<div data-role="page" id="registro" align="center">
+<h1>Registro de usuarios</h1>
+	<table>
+		<tr>
+			<td id="tituloR">Nombre:</td>
+			<td><input type="text" id="rnombre" placeholder="Nombre..."></td>
+		</tr>
+		<tr>
+			<td id="tituloR">Apellido paterno:</td>
+			<td><input type="text" id="rpaterno" placeholder="Paterno..."></td>
+		</tr>
+		<tr>
+			<td id="tituloR">Apellido materno:</td>
+			<td><input type="text" id="rmaterno"  placeholder="Materno..."></td>
+		</tr>
+		<tr>
+			<td id="tituloR">Edad:</td>
+			<td><input type="number" id="redad"  placeholder="Edad.."></td>
+		</tr>
+		<tr>
+			<td id="tituloR">Correo:</td>
+			<td><input type="email" id="rcorreo"  placeholder="Correo..."></td>
+		</tr>
+		<tr>
+			<td id="tituloR">Sexo:</td>
+			<td>
+				<select id="rsexo">
+					<option>--Seleccione un Genero--</option>
+					<option>Hombre</option>
+					<option>Mujer</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td id="tituloR">Direccion:</td>
+			<td><input type="text" id="rdireccion"  placeholder="Direccion..."></td>
+		</tr>
+		<tr>
+			<td id="tituloR">Usuario:</td>
+			<td><input type="text" id="ruserF"  placeholder="Usuario...."></td>
+		</tr>
+		<tr>
+			<td id="tituloR">Contraseña:</td>
+			<td><input type="password" id="rpass"  placeholder="*****..."></td>
+		</tr>
+		
+		
+	</table>
+	
+	<a id="rUsuarios" data-role="button" data-inline="true" data-icon="check" style="background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201">Registrar</a>
+	<a href="#Login"  data-role="button" data-inline="true" data-icon="back" style=" width: 75px;background:#7F9201;color: #fff;font-size: 17px; font-family: Bookman Old Style; border-radius: 15px;font-weight: lighter; border:5px solid #7F9201">Volver</a>
+</div>
+
+
+
+
+
+														<!--USUARIO REGISTRADO-->
+
+<div data-role="dialog" id="registroRealizado">
+	<div data-role="header">
+		<h1>Usuario Regsitrado!</h1>
+	</div>
+
+	<div data-role="content">
+		<a href="#Login" data-role="button">Aceptar</a>
+	</div>
+	
+</div>
+
+
+
+														
+
+<!--
+*
+*
+*
+*
+*
+*
+*
+*
+*											SEPARACION DE USUARIO
+*
+*
+*
+*
+*
+*
+*
+-->
+											<!--Pagina de usuario-->
+
+	<div id="pUsuario" data-role="page"	>
+		<!--<div data-role="header" id="cabezeraUsu" align="center">
+		
+		</div>-->
+
+		<div data-role="content" id="cuerpoUsu" align="center">
+		<h1>Usuario</h1><br>
+		<h1 >Bienvenido</h1>
+
+			<a href="#pUsuarioServicios" data-role="button" data-icon="tag">Servicios</a>
+			<a href="#pUsuarioMensajes" data-role="button" data-icon="mail">Mensajes</a>
+			<a href="#pUsuarioVentas" data-role="button" data-icon="grid">Ventas</a>
+			<a href="#pUsuarioContactanos" data-role="button" data-icon="info">Contactanos</a>
+			<a href="#pCSSU" data-rel="popup" data-position-to="window" data-transition="pop" data-role="button" data-icon="back" >Cerrar Sesion</a>
+		</div>
+		
+		<!--Pie de pagina -->
+		<div data-role="footer" id="piePagina" data-position="fixed" style="background-image: url(imagenes/simple-green.jpg); color: #fff;" >
+		<h2>Derechos reservados <br>Vivero@2017</h2>
+		</div>
+
+
+
+		<!--Confirmar cerrar sesion user-->
+
+		<div data-role="popup" id="pCSSU" style="padding: 10px;">
+
+			
+			<p>¿Cerrar Sesion?</p>
+			<a href="#Login" data-role="button" data-icon="check">Si</a>
+			<a href="#pUsuario" data-role="button" data-icon="delete">No</a>
+			
+
+		</div>
+
+
+	</div>
+
+
+
+
+
+
+														
+
+														 <!--Pagina de Servicios usuario-->
+
+<div id="pUsuarioServicios" data-role="page" style="background-image: url(imagenes/simple-green.jpg); color: #fff;">
+	<div data-role="header" id="cabezera" align="center">
+	<h1>Servicios</h1>
+	</div>
+	<div data-role="content" id="cabezera" align="center">
+
+		
+		
+		<a href="#pUsuario" data-role="button" data-icon="back">Volver</a>
+	</div>
+	
+	<!--Pie de pagina -->
+	<div data-role="footer" id="piePagina" data-position="fixed" style="background-image: url(imagenes/simple-green.jpg); color: #fff;" >
+	<h2>Derechos reservados <br>Vivero@2017</h2>
+	</div>
+</div>
+
+															<!--Pagina de Mensajes de usuario-->
+
+<div id="pUsuarioMensajes" data-role="page" style="background-image: url(imagenes/simple-green.jpg); color: #fff;">
+	<div data-role="header" id="cabezera" align="center">
+	<h1>Servicios</h1>
+	</div>
+	<div data-role="content" id="cabezera" align="center">
+
+		
+		
+		<a href="#pUsuario" data-role="button" data-icon="back">Volver</a>
+	</div>
+	
+	<!--Pie de pagina -->
+	<div data-role="footer" id="piePagina" data-position="fixed" style="background-image: url(imagenes/simple-green.jpg); color: #fff;" >
+	<h2>Derechos reservados <br>Vivero@2017</h2>
+	</div>
+</div>
+
+															<!--Pagina de Ventas de usuario-->
+
+<div id="pUsuarioVentas" data-role="page" style="background-image: url(imagenes/simple-green.jpg); color: #fff;">
+	<div data-role="header" id="cabezera" align="center">
+	<h1>Usuario</h1>
+	</div>
+	<div data-role="content" id="cabezera" align="center">
+
+		<a href="#pUsuarioPlantas" data-role="button" data-icon="shop">Plantas</a>
+		<a href="#pUsuarioCuadros" data-role="button" data-icon="shop">Cuadros</a>
+		
+		<a href="#pUsuario" data-role="button" data-icon="back">Volver</a>
+	</div>
+	
+	<!--Pie de pagina -->
+	<div data-role="footer" id="piePagina" data-position="fixed" style="background-image: url(imagenes/simple-green.jpg); color: #fff;">
+	<h2>Derechos reservados <br>Vivero@2017</h2>
+	</div>
+</div>
+															<!--Pagina de PLANTAS de usuario-->
+
+<div id="pUsuarioPlantas" data-role="page" style="background-image: url(imagenes/simple-green.jpg); color: #fff;">
+	<div data-role="header" id="cabezera" align="center">
+	<h1>Servicios</h1>
+	</div>
+	<div data-role="content" id="cabezera" align="center">
+
+		
+		
+		<a href="#pUsuarioVentas" data-role="button" data-icon="back">Volver</a>
+	</div>
+	
+	<!--Pie de pagina -->
+	<div data-role="footer" id="piePagina" data-position="fixed" style="background-image: url(imagenes/simple-green.jpg); color: #fff;" >
+	<h2>Derechos reservados <br>Vivero@2017</h2>
+	</div>
+</div>
+															<!--Pagina de CUADROS de usuario-->
+
+<div id="pUsuarioCuadros" data-role="page" style="background-image: url(imagenes/simple-green.jpg); color: #fff;">
+	<div data-role="header" id="cabezera" align="center">
+	<h1>Servicios</h1>
+	</div>
+	<div data-role="content" id="cabezera" align="center">
+
+		
+		
+		<a href="#pUsuarioVentas" data-role="button" data-icon="back">Volver</a>
+	</div>
+	
+	<!--Pie de pagina -->
+	<div data-role="footer" id="piePagina" data-position="fixed" style="background-image: url(imagenes/simple-green.jpg); color: #fff;">
+	<h2>Derechos reservados <br>Vivero@2017</h2>
+	</div>
+</div>
+
+															<!--Pagina de Contactanos  para el usuario-->
+
+<div id="pUsuarioContactanos" data-role="page" style="background-image: url(imagenes/simple-green.jpg); color: #fff;">
+	<div data-role="header" id="cabezera" align="center">
+	<h1>Información</h1>
+	</div>
+	<div data-role="content" id="cabezera" align="center">
+
+		<h2>Contactanos</h2>
+		<h2>Ricardo León Téllez</h2>
+		<h3>Carretera Villahermosa - Teapa Km 16.5</h3>
+		<h3>riki_fifa@hotmail.com</h3>
+		<h3>Telefono (o Whatsapp): (993)1604314</h3>
+		<a href="www.facebook.com"><img src="imagenes/facebook-announces-clickable-hashtags--resolution-media-17.png" width="80" height="50"></a>
+		<a href="www.twitter.com"><img src="imagenes/Twitter-Download-PNG.png" width="50" height="50"></a>
+		<h1>Preguntanos</h1>
+		<p>Preguntanos... Sobre alguna duda o aclaracion estamos a tus ordenes, por favor incluir tu nombre, telefono o correo para contactarnos pronto contigo.</p>
+		<textarea rows="50" cols="50" ></textarea>
+		<a href="" data-role="button" data-icon="mail">Enviar</a>
+		
+		<a href="#pUsuario" data-role="button" data-icon="back">Volver</a>
+	</div>
+	
+	<!--Pie de pagina -->
+	<div data-role="footer" id="piePagina" data-position="fixed" style="background-image: url(imagenes/simple-green.jpg); color: #fff;" >
+	<h2>Derechos reservados <br>Vivero@2017</h2>
+	</div>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+

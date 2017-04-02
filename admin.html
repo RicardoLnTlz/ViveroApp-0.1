@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ADMIN</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link  rel="stylesheet" href="jquery/jquery.mobile-1.4.5.min.css"/>
+<script src="jquery/jquery-latest.js"></script>
+<script src="jquery/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+
+	<!--Iniciar admin-->
+<div data-role="page" id="isAdmin">
+
+	
+
+	<!--Cabezera -->
+	<div data-role="header" data-theme="a">
+	<h1>Administrador</h1>	
+	</div>
+
+	<!--Contenido -->
+	<div data-role="content" align="left">
+	
+	<h1>Bienvenido</h1>
+	<a href="#pAdminInventario" data-role="button" data-icon="bars">Inventario</a>
+	<a href="#pAdminUsuarios" data-role="button" data-icon="user">Usuarios</a>
+	<a href="#pAdminAltas" data-role="button" data-icon="carat-u">Altas</a>
+	<a href="#pAdminBajas" data-role="button" data-icon="carat-d">Bajas</a>
+	<a href="#pAdminArticulos" data-role="button" data-icon="grid">Articulos</a>
+	<a href="#CSee" data-role="button" data-icon="back" data-inline="true">Cerrar Sesion</a>
+	</div>
+
+	
+
+
+</div>
+
+														<!--Pagina de Inventario ADMIN-->
+
+<div id="pAdminInventario" data-role="page">
+	<div data-role="header" id="cabezera" align="center">
+	<h1>Usuarios</h1>
+	</div>
+	<div data-role="content" id="cabezera" align="center">
+
+		
+		
+		<a href="#isAdmin" data-role="button" data-icon="back">Volver</a>
+	</div>
+	
+	<!--Pie de pagina -->
+	<div data-role="footer" id="piePagina" data-position="relative" >
+	<h2>Derechos reservados <br>Vivero@2017</h2>
+	</div>
+</div>
+
+
+ 														<!--Pagina de usuario ADMIN-->
+
+<div id="pAdminUsuarios" data-role="page">
+	<div data-role="header" id="cabezera" align="center">
+	<h1>Usuarios</h1>
+	</div>
+	<div data-role="content" id="cabezera" align="center">
+
+		<a href="" data-role="button" data-icon="phone">Pedidos</a>
+		<a href="" data-role="button" data-icon="shop">Servicios</a>
+		<a href="" data-role="button" data-icon="comment">Mensajes</a>
+		
+		<a href="#isAdmin" data-role="button" data-icon="back">Volver</a>
+	</div>
+	
+	<!--Pie de pagina -->
+	<div data-role="footer" id="piePagina" data-position="relative" >
+	<h2>Derechos reservados <br>Vivero@2017</h2>
+	</div>
+</div>
+
+														<!--Pagina de altas ADMIN-->
+
+<div id="pAdminAltas" data-role="page">
+	<div data-role="header" id="cabezera" align="center">
+	<h1>Usuarios</h1>
+	</div>
+	<div data-role="content" id="cabezera" align="center">
+
+		<table>
+		<tr>
+			<td id="tituloR">Tipo de articulo:</td>
+			<td>
+				<select>
+					<option>Planta</option>
+					<option>Cuadro</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td id="tituloR">Titulo de articulo:</td>
+			<td><input type="text" value="" placeholder="Planta o cuadro..."></td>
+		</tr>
+		<tr>
+			<td id="tituloR">Foto:</td>
+			<td><input type="file" value=""></td>
+		</tr>
+		<tr>
+			<td id="tituloR">Comentario:</td>
+			<td><textarea rows="40" cols="20" placeholder="Caracteristicas..."></textarea></td>
+		</tr>
+		<tr>
+			<td id="tituloR">Cantidad total:</td>
+			<td><input type="number" value="" placeholder="1,2,3,4,5..."></td>
+		</tr>
+		<tr>
+			<td id="tituloR">Fecha de ingreso:</td>
+			<td><input type="date" value=""></td>
+		</tr>
+		<tr>
+			<td id="tituloR">Precio/pieza:</td>
+			<td>$<input type="text" value="" placeholder="200.00"></td>
+		</tr>
+	</table>
+		
+		<a href="" data-role="button" data-icon="check">Registrar</a>
+		<a href="#isAdmin" data-role="button" data-icon="back">Volver</a>
+	</div>
+	
+	<!--Pie de pagina -->
+	<div data-role="footer" id="piePagina" data-position="relative" >
+	<h2>Derechos reservados <br>Vivero@2017</h2>
+	</div>
+</div>
+
+														<!--Pagina de bajas ADMIN-->
+
+<div id="pAdminBajas" data-role="page">
+	<div data-role="header" id="cabezera" align="center">
+	<h1>Usuarios</h1>
+	</div>
+	<div data-role="content" id="cabezera" align="center">
+
+		
+		
+		<a href="#isAdmin" data-role="button" data-icon="back">Volver</a>
+	</div>
+	
+	<!--Pie de pagina -->
+	<div data-role="footer" id="piePagina" data-position="relative" >
+	<h2>Derechos reservados <br>Vivero@2017</h2>
+	</div>
+</div>
+
+														<!--Pagina de Articulos ADMIN-->
+
+<div id="pAdminArticulos" data-role="page">
+	<div data-role="header" id="cabezera" align="center">
+	<h1>Usuarios</h1>
+	</div>
+	<div data-role="content" id="cabezera" align="center">
+
+		
+		
+		<a href="#isAdmin" data-role="button" data-icon="back">Volver</a>
+	</div>
+	
+	<!--Pie de pagina -->
+	<div data-role="footer" id="piePagina" data-position="relative" >
+	<h2>Derechos reservados <br>Vivero@2017</h2>
+	</div>
+</div>
+
+														<!--Confirmar cerrar sesion admin-->
+<div data-role="dialog" id="CSee">
+
+	<!--Cabezera -->
+	<div data-role="header" data-theme="a">
+	<h1>Confirmar</h1>
+	</div>
+
+	<!--Contenido -->
+	<div data-role="content">
+	
+	<p>¿Cerrar Sesion?</p>
+	<a href="#Login" data-role="button" data-icon="check">Si</a>
+	<a href="#isAdmin" data-role="button" data-icon="delete">No</a>
+	</div>
+
+</div>
+
+</body>
+</html>
